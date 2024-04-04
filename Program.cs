@@ -259,6 +259,8 @@ do
         }
     }
 
+
+
 } while (choice == "1" || choice == "2" || choice == "3" || choice == "4" || choice == "5");
 
 
@@ -266,7 +268,19 @@ do
 
 
 
+public class TicketFile
+{
 
+    public string filePath { get; set; }
+
+    public string enhancmentPath { get; set; }
+
+    public List<Ticket> tickets { get; set; }
+    public List<Task> tasks { get; set; }
+
+    public List<Enhancment> enhancments { get; set; }
+
+}
 
 
 
