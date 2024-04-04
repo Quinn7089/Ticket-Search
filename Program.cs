@@ -303,6 +303,18 @@ public class TicketFile
                 tickets.Add(newTicket);
 
             }
+            StreamReader sq = new StreamReader(EnhancementFile);
+            while (!sq.EndOfStream)
+            {
+
+                string enhancmentData = sq.ReadLine();
+
+                string[] enhancementDataArray = enhancmentData.Split(",");
+
+                Enhancment newEnhancment = new Enhancment(enhancementDataArray[0], enhancementDataArray[1], enhancementDataArray[2], enhancementDataArray[3], enhancementDataArray[4], enhancementDataArray[5], enhancementDataArray[6], enhancementDataArray[7], enhancementDataArray[8], enhancementDataArray[9]);
+
+                enhancments.Add(newEnhancment);
+            }
         }
         catch
         {
