@@ -258,6 +258,17 @@ do
             sw.Close();
         }
     }
+    if (choice == "5")
+    {
+        TicketFile ticketFile = new TicketFile(file, EnhancementFile, taskFile);
+
+
+        string Search = "";
+
+        Console.WriteLine("Search by priority");
+        Search = Console.ReadLine();
+
+    }
 
 
 
@@ -440,3 +451,4 @@ public class TicketFile
 
 
     }
+}
