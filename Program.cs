@@ -315,10 +315,21 @@ public class TicketFile
 
                 enhancments.Add(newEnhancment);
             }
+            StreamReader tq = new StreamReader(taskFile);
+            while (!tq.EndOfStream)
+            {
+                string taskData = tq.ReadLine();
+
+                string[] taskDataArray = taskData.Split(",");
+
+                Task newTask = new Task(taskDataArray[0], taskDataArray[1], taskDataArray[2], taskDataArray[3], taskDataArray[4], taskDataArray[5], taskDataArray[6], taskDataArray[7], taskDataArray[8]);
+
+                tasks.Add(newTask);
+            }
         }
         catch
         {
-
+            Console.WriteLine("Wrong input");
         }
     }
 
