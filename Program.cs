@@ -280,6 +280,32 @@ do
 
         Console.WriteLine($"There are {total} tickets with priority {Search}");
 
+        foreach (Ticket ticket in ticketFinds)
+        {
+            Console.WriteLine("Ticket Data:");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"{ticket.TicketID + "," + ticket.Summary + "," + ticket.Status + "," + ticket.Priority + "," + ticket.Submitter + "," + ticket.Assigend + "," + ticket.Watching}");
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+
+
+
+        foreach (Enhancment enhancment in enhancmentFinds)
+        {
+            Console.WriteLine("Enhancement Data:");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"{enhancment.TicketID + "," + enhancment.Summary + "," + enhancment.Status + "," + enhancment.Priority + "," + enhancment.Submitter + "," + enhancment.Assigend + "," + enhancment.Watching + ", " + enhancment.Software + "," + enhancment.Cost + "," + enhancment.estimate}");
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+
+        foreach (Task task in tasksFinds)
+        {
+            Console.WriteLine("Task Data:");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"{task.TicketID + "," + task.Summary + "," + task.Status + "," + task.Priority + "," + task.Submitter + "," + task.Assigend + "," + task.Watching + "," + task.Name + "," + task.DueDate}  ");
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+
 
     }
 
